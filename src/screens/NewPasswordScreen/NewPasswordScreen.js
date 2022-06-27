@@ -4,17 +4,11 @@ import CustomButton from "../../components/CustomButton";
 import CustomInput from "../../components/CustomInput/CustomInput";
 
 const NewPasswordScreen = () => {
-  const [username, setUsername] = useState("");
+  const [code, setCode] = useState("");
+  const [newPassword, setNewPassword] = useState("");
 
-  const onConfirmPressed = () => {
-    console.warn("onRegister");
-  };
-
-  const onSignUpPress = () => {
-    console.warn("onSignUpPress");
-  };
-  const onSendPress = () => {
-    console.warn("onsend");
+  const onSubmitPressed = () => {
+    console.warn("onSubmit");
   };
 
   return (
@@ -22,16 +16,17 @@ const NewPasswordScreen = () => {
       <View style={styles.root}>
         <Text style={styles.title}>Reset your password</Text>
 
+        <CustomInput placeholder="Code" value={code} setValue={setCode} />
         <CustomInput
-          placeholder="Username"
-          value={username}
-          setValue={setUsername}
+          placeholder="Enter your new password"
+          value={newPassword}
+          setValue={setNewPassword}
           secureTextEntry
         />
-        <CustomButton text="Send" onPress={onConfirmPressed} type="PRIMARY" />
+        <CustomButton text="Submit" onPress={onSubmitPressed} type="PRIMARY" />
         <CustomButton
           text="Back to Sign In"
-          onPress={onSignUpPress}
+          onPress={onSubmitPressed}
           type="TERTIARY"
         />
       </View>

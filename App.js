@@ -1,11 +1,11 @@
-import { SafeAreaView, StyleSheet, Image } from "react-native";
-import ConfirmEmailScreen from "./src/screens/ConfirmEmailScreen/ConfirmEmailScreen";
-import ForgotPasswordScreen from "./src/screens/ForgotPasswordScreen/ForgotPasswordScreen";
+import { SafeAreaView, StyleSheet } from "react-native";
+
+import Navigation from "./src/navigation/index";
 
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
-      <ForgotPasswordScreen />
+      <Navigation />
     </SafeAreaView>
   );
 };
